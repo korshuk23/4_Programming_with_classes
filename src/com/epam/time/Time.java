@@ -33,7 +33,7 @@ public class Time {
     }
 
     public String minusHours(int hours) {
-        localTime = localTime.plusHours(hours);
+        localTime = localTime.minusHours(hours);
         return localTime.toString();
     }
 
@@ -102,7 +102,7 @@ public class Time {
         try {
             this.localTime = LocalTime.of(localTime.getHour(), localTime.getMinute(), seconds);
         } catch (DateTimeException e) {
-            System.out.println(e.getMessage());
+            System.out.println("ERROR " + e.getMessage());
         }
     }
 }
